@@ -4,16 +4,11 @@
 
 class Trojkaty {
     /**
-
     * Funkcja zwraca ile par odcinków trójkąta ma jednakową długość.
-=======
-    * Funkcja do  sprawdzenia czy trójkąt o podanych bokach to trójkąt prostokątny.
-
     * @param {float} a - Długość pierwszego boku.
     * @param {float} b - Długość drugiego boku.
     * @param {float} c - Długość trzeciego boku.
     */
-
     public static int ileJednakowych(float a, float b, float c){
         int jednakowe = 0; // tutaj zliczamy ile jest jednakowych bokow
         if (a == b) {
@@ -23,7 +18,14 @@ class Trojkaty {
             jednakowe++;
         }
         return jednakowe;
+    }
 
+    /** 
+    * Funkcja do  sprawdzenia czy trójkąt o podanych bokach to trójkąt prostokątny.
+    * @param {float} a - Długość pierwszego boku.
+    * @param {float} b - Długość drugiego boku.
+    * @param {float} c - Długość trzeciego boku.
+    */
     public static boolean czyProstokatny(float a, float b, float c){
         if (a * a + b * b == c*c) return true;
         if (b * b + c * c == a*a) return true;
@@ -31,6 +33,7 @@ class Trojkaty {
         return false;
 
     }
+
     /**
      * Główna funkcja programu.
      * @param {float} a - Długość pierwszego boku.
@@ -46,12 +49,14 @@ class Trojkaty {
         }
          // TODO: tutaj trzeba bedzie dopisac inne przypadki
     }
+
     /** Wyświetla ekran pomocy */
     public static void pomoc(){
         System.out.println("Acme INC. (C) 2022");
         System.out.println("Program do rozpoznawania rodzaju trójkąta");
         System.out.println("Uruchom z trzema argumentami liczbowymi - długość boków trójkąta");
     }
+
     /**
     * Funkcja do sprawdzenia czy trójkąt o podanych bokach może zostać zbudowany.
     * @param {float} a - Długość pierwszego boku.
@@ -64,6 +69,7 @@ class Trojkaty {
         if (b + c <= a) return false;
         return true;
     }
+    
     /** Glowna funkcja */
     public static void main(String... args) {
     if (args.length != 3) {
